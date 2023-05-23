@@ -1,12 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import MediaControl from "../MediaControl/MediaControl";
 
-//const testLink = "src/assets/fate_stay_night_UBW.mp4"
-//const testLink = "src/assets/gintama_genjou_destruction.mp4"
-
 const Media = ({ sourceLink, returnButtonClick, currentPlay, setCurrentPlay }) => {
     const [typeOfMedia, setTypeOfMedia] = useState(null);
-    const [decodedData, setDecodedData] = useState(null);
+	const [decodedData, setDecodedData] = useState(null);
 	const [onPause, setOnPause] = useState(true);
 	const [speedValue, setSpeedValue] = useState(1);
     const [mediaProgress, setMediaProgress] = useState(0);
