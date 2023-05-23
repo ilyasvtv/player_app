@@ -34,6 +34,7 @@ const MediaPlayer = () => {
 		setHistoryData(data);
 	}, [sourceLink])
 	
+	//clear storage to prevent unpredicted behaviour from last user session
 	useEffect(() => {
 		localStorage.clear();
 	}, [])
