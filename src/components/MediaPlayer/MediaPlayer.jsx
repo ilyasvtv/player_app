@@ -18,7 +18,6 @@ const MediaPlayer = () => {
 	//init
 	useEffect(() => {
 		//history managment
-		//localStorage.clear()
 		const data = [];
 		if (sourceLink.length > 1) localStorage.setItem(`${localStorage.length}`, sourceLink);
 		for (let i = 0; i < localStorage.length; i++) {
@@ -34,6 +33,10 @@ const MediaPlayer = () => {
 		}
 		setHistoryData(data);
 	}, [sourceLink])
+	
+	useEffect(() => {
+		localStorage.clear();
+	}, [])
 
 	const handleForm = (e) => {
 		e.preventDefault();
