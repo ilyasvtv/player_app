@@ -1,0 +1,272 @@
+.main
+    background: #000
+    .head
+        background: #EEEEEE
+        .container
+            display: grid
+            grid-template-columns: 36.8% 1fr
+            grid-template-rows: 156px 1fr
+            min-height: 490px
+        .title
+            font-family: 'Space Grotesk'
+            font-style: normal
+            font-weight: 400
+            font-size: 48px
+            line-height: 52px
+            letter-spacing: -1px
+            color: #000
+        .info
+            display: flex
+            flex-wrap: wrap
+            align-content: space-between
+            &__title
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 300
+                font-size: 24px
+                line-height: 32px
+                letter-spacing: -0.4px
+                color: #1B191C
+            &__comment
+                position: absolute
+                bottom: 40px
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 300
+                font-size: 12px
+                line-height: 16px
+                letter-spacing: -0.3px
+                color: #1B191C
+                span
+                    font-weight: 400
+        &__media
+            grid-column-start: 2
+            grid-column-end: 3
+            grid-row-start: 1
+            grid-row-end: 3
+            display: flex
+            flex-wrap: wrap
+            align-content: center
+            padding: 0 13.27%
+            .media-title
+                width: 100%
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 400
+                font-size: 24px
+                line-height: 32px
+                letter-spacing: -0.4px
+                margin-bottom: 20px
+                color: #1B191C
+            .link-source
+                width: 100%
+            .history
+                position: absolute
+                background: #fff
+                width: calc(100% - 96px)
+                left: 0
+                top: 100%
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 300
+                font-size: 20px
+                line-height: 28px
+                letter-spacing: -0.4px
+                color: #A4A3A4
+                padding: 8px
+                cursor: pointer
+                z-index: 1
+                &__item
+                    display: flex
+                    align-items: center
+                    height: 48px
+                    white-space: nowrap
+                    overflow: hidden
+                    border-bottom: 1px solid #00000020
+                    &:last-child
+                        border: none
+            .active
+                background: #00000010
+            .errorPlace
+                display: none
+            .wrap
+                display: flex
+                position: relative
+                width: 100%
+                height: 96px
+                .link-input
+                    width: calc(100% - 96px)
+                    padding: 32px 16px
+                    font-family: 'Space Grotesk'
+                    font-style: normal
+                    font-weight: 300
+                    font-size: 24px
+                    line-height: 32px
+                    letter-spacing: -0.4px
+                    border: none
+                    border-bottom: 1px solid #00000020
+                .square-btn
+                    width: 96px
+                    background: #F8D231
+                    border: none
+                    cursor: pointer
+                    transition: background 0.3s
+                    &:hover
+                        background: #F8D23190
+                        transition: background 0.3s
+                .error-icon
+                    position: absolute
+                    right: 114px
+                    top: 50%
+                    transform: translateY(-50%)
+            .error-message
+                margin-top: 8px
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 300
+                font-size: 12px
+                line-height: 16px
+                letter-spacing: -0.3px
+                color: #C6A827
+            .error-popup-message
+                display: flex
+                align-items: center
+                width: 43.65%
+                height: 73px
+                top: 8px
+                left: 50%
+                transform: translate(-50%)
+                background: #FFFFFF
+                border: 0.5px solid #E6E6E6
+                position: absolute
+                gap: 12px
+                padding: 20px
+                &__image
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 32px
+                    height: 32px
+                    background: #F8D231
+                &__problem
+                    width: calc(100% - 64px)
+                    white-space: nowrap
+                    overflow: hidden
+                    height: 33px
+                    .warning
+                        font-family: 'Space Grotesk'
+                        font-style: normal
+                        font-weight: 400
+                        font-size: 12px
+                        line-height: 140%
+                        color: #1B191C
+                    .problem
+                        font-family: 'Space Grotesk'
+                        font-style: normal
+                        font-weight: 300
+                        font-size: 12px
+                        line-height: 16px
+                        letter-spacing: -0.3px
+                        color: #1B191C
+                &__close
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 32px
+                    height: 32px
+                    background: transparent
+                    border: none
+                    cursor: pointer
+            .wrap-btn
+                width: 100%
+
+    .body
+        min-height: 950px
+        color: #fff
+        .container
+            display: block
+        &__promo
+            display: flex
+            align-items: center
+            min-height: 252px
+            margin-top: 80px
+            .info
+                width: 50.3%
+                &__title
+                    font-family: 'Space Grotesk'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 48px
+                    line-height: 52px
+                    letter-spacing: -1px
+                    color: #F5F6F7
+                &__text
+                    margin-top: 40px
+                    font-family: 'Space Grotesk'
+                    font-style: normal
+                    font-weight: 300
+                    font-size: 24px
+                    line-height: 32px
+                    letter-spacing: -0.4px
+                    color: #EEEEEE
+            .image
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 49.7%
+                img
+                    max-width: 95%
+        &__info
+            display: flex
+            flex-wrap: wrap
+            margin-top: 120px
+            .title
+                width: 100%
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 400
+                font-size: 24px
+                line-height: 32px
+                letter-spacing: -0.4px
+                color: #F5F6F7
+            .tags
+                display: flex
+                width: 100%
+                gap: 16px
+                margin-top: 40px
+                margin-bottom: 32px
+                .switch-tag
+                    width: fit-content
+                    font-family: 'Space Grotesk'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 24px
+                    line-height: 32px
+                    letter-spacing: -0.4px
+                    color: #CFD3D640
+                    cursor: pointer
+                .active
+                    color: #F5F6F7
+                    border-bottom: 1px solid #F5F6F7
+            .specs
+                display: flex
+                width: 100%
+                flex-wrap: wrap
+                gap: 0 3.6%
+                .spec
+                    display: flex
+                    align-items: center
+                    width: 48.2%
+                    height: 56px
+                    font-family: 'Space Grotesk'
+                    font-style: normal
+                    font-weight: 300
+                    font-size: 24px
+                    line-height: 32px
+                    letter-spacing: -0.4px
+                    color: #EEEEEE
+                    border-bottom: 1px solid #EEEEEE40
+                    .name
+                        width: 38.8%
+
+@import 'index-media'

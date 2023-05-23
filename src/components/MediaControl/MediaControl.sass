@@ -1,0 +1,228 @@
+.back-btn
+    font-family: 'Space Grotesk'
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: -0.4px
+    color: #1B191C
+    border: none
+    margin-bottom: 20px
+    cursor: pointer
+
+.media-container
+    height: fit-content
+    width: 100%
+    &:nth-child(1)
+        margin-top: 100px
+    &:nth-child(2)
+        margin-top: 20px
+        margin-bottom: 100px
+.media-control
+    display: flex
+    gap: 20px
+    position: relative
+    height: 198px
+    width: 100%
+    background: #CFD3D6
+    padding: 20px
+    overflow: hidden
+    .main-wrap
+        display: flex
+        width: calc(100% - 32px)
+        height: 100%
+        flex-direction: column
+        justify-content: space-between
+        position: relative
+    &__button
+        background: transparent
+        width: fit-content
+        border: none
+        cursor: pointer
+    &__drag
+        width: 100%
+        height: 62px
+        background: #ADACAD
+        margin: 0 auto
+        -webkit-appearance: none
+        z-index: 2
+        cursor: pointer
+        opacity: 0
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            background: #fff
+            width: 16px
+            height: 12px
+            border-radius: 6px
+    &__settings
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        height: 16px
+        margin: 0 auto
+    &__time
+        font-family: 'Space Grotesk'
+        font-style: normal
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: -0.3px
+        color: #1B191C
+    &__canvas
+        position: absolute
+        width: 100%
+        height: 62px
+        top: 61px
+        z-index: 1
+    &__sound-drag
+        width: 252px
+        height: 2px
+        background: #fff
+        -webkit-appearance: none
+        cursor: pointer
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            background: #000
+            width: 16px
+            height: 12px
+            background: #434343
+        
+    .sub-wrap
+        position: relative
+        width: 32px
+        &__settings-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            background: transparent
+            border: none
+            cursor: pointer
+        &__speed-setting
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            width: 91px
+            height: 132px
+            position: absolute
+            top: 26px
+            left: -59px
+            background: #fff
+            z-index: 3
+            .setting
+                width: 75px
+                height: 44px
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 300
+                font-size: 20px
+                line-height: 28px
+                letter-spacing: -0.4px
+                color: #A4A3A4
+                padding: 8px 0
+                border-bottom: 1px solid #00000010
+                cursor: pointer
+                &:last-child
+                    border: none
+        .input-wrap
+            position: absolute
+            width: 122px
+            transform: rotate(90deg)
+            left: -47px
+            top: 78px
+        &__panner
+            width: 122px
+            -webkit-appearance: none
+            cursor: pointer
+            &::-webkit-slider-thumb
+                position: relative
+                -webkit-appearance: none
+                background: #F8D231
+                opacity: 0
+                width: 16px
+                height: 32px
+                z-index: 3
+            &::after
+                content: "L"
+                position: absolute
+                top: 50%
+                left: 5px
+                transform: translateY(-50%) rotate(-90deg)
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 400
+                font-size: 12px
+                line-height: 16px
+                text-align: center
+                letter-spacing: -0.3px
+                color: #767577
+            &::before
+                content: "R"
+                position: absolute
+                right: 5px
+                bottom: 50%
+                transform: translateY(50%) rotate(-90deg)
+                font-family: 'Space Grotesk'
+                font-style: normal
+                font-weight: 400
+                font-size: 12px
+                line-height: 16px
+                text-align: center
+                letter-spacing: -0.3px
+                color: #767577
+        &__panner-value
+            position: absolute
+            width: 32px
+            font-family: 'Space Grotesk'
+            font-style: normal
+            font-weight: 400
+            font-size: 12px
+            line-height: 16px
+            text-align: center
+            letter-spacing: -0.3px
+            transform: rotate(-90deg)
+            top: 8px
+            left: 50px
+            background: #F8D231
+            z-index: 1
+
+.animated
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        height: 3px
+        background: #fff
+        animation: running-line 1s linear infinite
+
+.loader
+    position: relative
+    width: 80%
+    height: 88px
+    border: 1px dashed #9747FF
+    border-radius: 5px
+    margin: 70px auto
+    overflow: hidden
+    .running-line
+        position: absolute
+        width: 93.5%
+        height: 4px
+        top: 20px
+        background: #9747FF
+        animation: running-line 0.6s ease-out infinite
+        &:nth-child(2)
+            animation-delay: 800ms
+            top: 44px
+        &:nth-child(3)
+            top: 68px
+
+@keyframes running-line
+    0%
+        left: -100%
+    100%
+        left: 100%
+
+@import 'MediaControl-media'
