@@ -1,4 +1,4 @@
-# player_app
+# player_app <br />
 Keyboard control:
   "Key P" - play / pause
   "Arrow Right" - +3 seconds
