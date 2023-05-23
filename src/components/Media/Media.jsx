@@ -213,12 +213,6 @@ const Media = ({ sourceLink, returnButtonClick, currentPlay, setCurrentPlay }) =
 						return value 
 					})
 					break;
-				case "ArrowRight":
-					mediaRef.current.currentTime += 3;
-					break;
-				case "ArrowLeft":
-					mediaRef.current.currentTime -= 3;
-					break;
 				case "KeyP":
 					setOnPause(prev => !prev)
 					break;	
