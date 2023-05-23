@@ -45,7 +45,7 @@ const MediaControl = (
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
         const posDif = canvas.width / data.length;
-        const WIDTH_OF_RECT = Math.floor(posDif) - 1;
+        const widthOfRect = Math.floor(posDif) - 1;
         ctx.fillStyle = color;
         if (refreshCanvas) ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < length; i++) {
@@ -53,7 +53,7 @@ const MediaControl = (
             if (typeOfSource !== "radio") size = Math.floor(data[i] / (Math.max(...data) + 1) * canvas.height) - 25;
             else size = Math.abs((data[i] / 2 - canvas.height));
             size = size <= 0 ? 1 : size;
-            ctx.fillRect(i * posDif, canvas.height / 2 - size / 2, WIDTH_OF_RECT, size);
+            ctx.fillRect(i * posDif, canvas.height / 2 - size / 2, widthOfRect, size);
         }
     }
 
